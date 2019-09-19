@@ -1,5 +1,5 @@
 alert("It is the zombie apocalypse. You are looting a store and suddenly a zombie bursts through the door!");
-var weapon = prompt("You search around frantically for a weapon. What do you choose?");
+var weapon = prompt("You search around frantically for a weapon. What do you choose?","axe");
 var randomizer = Math.round(Math.random());
 
 alert("You attack the zombie with your " + weapon + ".");
