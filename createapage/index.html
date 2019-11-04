@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Create your own page</title>
+	<script src="js/script.js" defer></script>
+	<style type="text/css">
+		body {
+			font-family:Calibri;
+		}
+		textarea {
+			width:500px;
+			height:100px;
+		}
+		#container {
+			width:100%;
+			display:flex;
+			flex-wrap:wrap;
+		}
+		.box {
+			max-width:45%;
+			margin:15px;
+		}
+		#custompage, hr {
+			width:100%;
+		}
+		#fontsize {
+			width:50px;
+		}
+		blockquote {
+			border:1px solid #303030;
+			padding:10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div class="box">
+			<h1>Create your own page</h1>
+			<p>By choosing an <strong>element</strong> from the dropdown menu and entering text in the <strong>textbox</strong> you can create your own HTML page. Elements will be added below the separator in the order they're created.</p>
+			<p>To remove an element, click on it and confirm that you want to remove it.</p>
+			<!-- <form onsubmit="return false"> -->
+			<form>
+				<p>Choose an element to add:</p>
+				<select id="element">
+					<option value="h1">H1</option>
+					<option value="h2">H2</option>
+					<option value="h3">H3</option>
+					<option value="p">P</option>
+					<option value="blockquote">Blockquote</option>
+				</select>
+				<p>Enter the text you want to add to your element:</p>
+				<p><textarea id="text"></textarea></p>
+				<button id="addbutton">Add to page</button>
+			</form>
+		</div>
+		<div class="box">
+			<h2>Change the way it looks</h2>
+			<p>Select and/or edit the values below to change the appearance of the page.</p>
+			<p>Pick a font:
+				<select id="customfont">
+					<option></option>
+					<option value="Courier">Courier</option>
+					<option value="Arial">Arial</option>
+					<option value="Times New Roman">Times New Roman</option>
+				</select></p> 
+			<p>Background color of page: <input type="color" id="bgcolor"></p>
+			<p>Font color: <input type="color" id="fontcolor"></p>
+			<p>Font size: <input type="number" id="fontsize"> pixels</p>
+		</div>		
+		<hr>
+		<div id="custompage">
+		</div>
+	</div>
+</body>
+
+</html>
